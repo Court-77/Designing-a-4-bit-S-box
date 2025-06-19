@@ -1,0 +1,25 @@
+def poly_sbox(a, b, c, d):
+    sbox = []
+    for x in range(16):
+        val = (a * x**3 + b * x**2 + c * x + d) % 16
+        sbox.append(val)
+    return sbox
+
+def is_bijective(sbox):
+    return len(set(sbox)) == 16
+
+bijective_polys = []
+
+# Try all combinations of a, b, c, d in 0–15
+for a in range(16):
+    for b in range(16):
+        for c in range(16):
+            for d in range(16):
+                sbox = poly_sbox(a, b, c, d)
+                if is_bijective(sbox):
+                    bijective_polys.append((a, b, c, d))
+
+print(f"Found {len(bijective_polys)} bijective polynomials!")
+print("Some examples:")
+for i, (a, b, c, d) in enumerate(bijective_polys[:5]):  # just show a few
+    print(f"{i+1}: S(x) = ({a}x^3 + {b}x^2 + {c}x + {d}) % 16")
