@@ -11,4 +11,4 @@ An S-Box (substitution box) is a nonlinear transformation used in block ciphers 
 The S-box function is defined as:
 S(x) = 3x^2 + 5x^2 + 2x + 7 (mod 16)
 
-For a detailed explanation of the polynomial and S-box generation, see [POLYNOMIAL.md](POLYNOMIAL.md).
+For a detailed explanation of the polynomial and S-box generation, see [POLYNOMIAL.md](POLYNOMIAL.md). 
