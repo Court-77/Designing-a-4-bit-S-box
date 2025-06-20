@@ -2,15 +2,11 @@
 
 This repository contains a Python implementation of a 4-bit S-Box used in symmetric cryptography.
 
-## Features
+## What Is an S-Box?
 
-- S-box lookup function
-- Inverse S-box
-- Bit-level manipulation utilities
+An S-Box (substitution box) is a nonlinear transformation used in block ciphers to obscure the relationship between plaintext and ciphertext. This 4-bit S-Box maps a 4-bit input to a 4-bit output.
 
-## Usage
+## Mathematical Background
 
-```python
-from sbox import sbox_lookup
+The S-box function is defined as:
 
-sbox_lookup(0b0110)  # Example input
